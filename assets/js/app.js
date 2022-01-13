@@ -265,9 +265,14 @@ var app;
 const modalBtn = document.querySelector('.modal-btn');
 const modal = document.querySelector('.__checkoutcontainer');
 const overlay = document.querySelector('.overlay');
-const modalClose = document.querySelector('.modal-close');
+const modalClose = document.querySelector('.modal-close')
 
 modalBtn.addEventListener('click', function () {
-  modal.classList.toggle('modal-close');
-  overlay.classList.toggle('modal-close');
+  modal.classList.toggle('modal-hidden');
+  overlay.classList.toggle('overlay-hidden');
 });
+modalClose.addEventListener('click', () => {
+	modal.classList.add('modal-hidden');
+	overlay.classList.add('overlay-hidden');
+	console.log(modalClose);
+})
