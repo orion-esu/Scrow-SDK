@@ -221,3 +221,35 @@ input[type="date"]:hover::-webkit-calendar-picker-indicator:hover {
 		max-width: 80vmin;
 	}
 }
+
+/* Modal */
+.modal-btn{
+	background-color: #fff;
+	font-size: 1.2rem;
+	border: none;
+	color: #8c9eb1;
+	outline: 1px solid #fff;
+	font-family: inherit;
+	padding: .5rem 1rem;
+	font-weight: 500;
+	margin: auto;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+}
+.modal-btn:focus{
+	outline: 1px solid #8c9eb1;
+}
+.modal-close{
+	display: none;
+}
+.overlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, .6);
+	z-index: -2;
+}
