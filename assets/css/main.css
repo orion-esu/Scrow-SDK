@@ -55,8 +55,9 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	transform: scale(1);
-	transition: all .1s .1s;
+	opacity: 0;
+	visibility: hidden;
+	transition: visibility 0s, opacity .5s;
 }
 .__checkoutwrapper {
 	position: relative;
@@ -234,27 +235,19 @@ input[type="date"]:hover::-webkit-calendar-picker-indicator:hover {
 	font-family: inherit;
 	padding: .5rem 1rem;
 	font-weight: 500;
-	margin: auto;
+	display: grid;
 	position: absolute;
-	transform: translate(-50%, -50%);
 	top: 50%;
 	left: 50%;
+	transform: translate(-50%, -50%);
 	transition: all 2s ease-in-out;
 }
 .modal-btn:focus{
 	outline: 1px solid #8c9eb1;
 }
-.modal-hidden{
-	transform: scale(0);
-}
-.modal-close{
-	color: rgba(59, 130, 246, 0.5);
-    font-size: 2rem;
-    position: absolute;
-    top: -5px;
-    right: 11px;
-    font-weight: 700;
-	cursor: pointer;
+.modal-active{
+	opacity: 1;
+	visibility: visible;
 }
 .overlay{
 	position: absolute;
@@ -263,17 +256,13 @@ input[type="date"]:hover::-webkit-calendar-picker-indicator:hover {
 	height: 100%;
 	width: 100%;
 	background-color: rgba(0, 0, 0, .1);
-	z-index: -2;
+	backdrop-filter: blur(1px);
+	opacity: 0;
+	visibility: hidden;
+	transition: all .2s;
+}
+.overlay-active{
 	backdrop-filter: blur(3px);
 	opacity: 1;
 	visibility: visible;
-	transition: all .2s;
 }
-.overlay-hidden{
-	backdrop-filter: blur(0px);
-	opacity: 0;
-	visibility: hidden;
-}
-.hidden{
-	display: none;
-} 
