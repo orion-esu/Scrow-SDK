@@ -266,15 +266,18 @@ var app;
 
 ////////////////////////////////////////////
 const modalBtn = document.querySelector('.modal-btn');
-const modal = document.querySelector('.__checkoutcontainer');
+const modal = document.querySelector('.__checkoutwrapper');
 const overlay = document.querySelector('.overlay');
 const modalClose = document.querySelector('.modal-close');
+const secured = document.querySelector('.secured');
 
 modalBtn.addEventListener('click', function () {
   modal.classList.add('modal-active');
-  overlay.classList.add('overlay-active');
+  overlay.classList.add('active');
+  secured.classList.add('active');
 });
 overlay.addEventListener('click', () => {
   modal.classList.remove('modal-active');
-  overlay.classList.remove('overlay-active');
+  overlay.classList.remove('active');
+  secured.classList.remove('active');
 });
