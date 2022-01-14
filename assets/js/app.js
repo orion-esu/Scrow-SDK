@@ -266,15 +266,30 @@ var app;
 
 ////////////////////////////////////////////
 const modalBtn = document.querySelector('.modal-btn');
-const modal = document.querySelector('.__checkoutcontainer');
+const modal = document.querySelector('.__checkoutwrapper');
 const overlay = document.querySelector('.overlay');
 const modalClose = document.querySelector('.modal-close');
+const secured = document.querySelector('.secured');
+const spinner = document.querySelector('.spin');
 
+// Event listener on btn element
 modalBtn.addEventListener('click', function () {
-  modal.classList.add('modal-active');
-  overlay.classList.add('overlay-active');
+  overlay.classList.add('overlay-active'); // opens overlay
+  spinner.classList.add('shown'); // opens spinner
+  setTimeout(() => {
+    // opens modal and secured class after delay of 5000
+    modal.classList.add('modal-active');
+    secured.classList.add('active');
+    closeSpinner(); // closes spinner after delay is past
+  }, 2500);
 });
+const closeSpinner = function () {
+  // function to close spinner
+  spinner.classList.remove('shown');
+};
+// Event listener to close modal, overlay and secured class
 overlay.addEventListener('click', () => {
   modal.classList.remove('modal-active');
   overlay.classList.remove('overlay-active');
+  secured.classList.remove('active');
 });
