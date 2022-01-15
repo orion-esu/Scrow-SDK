@@ -133,7 +133,7 @@ body {
   width: 66%;
 }
 .__card {
-  top: 7px;
+  top: 4px;
   left: 25px;
 }
 .transfer_wrapper {
@@ -244,10 +244,8 @@ input[type='date']:hover::-webkit-calendar-picker-indicator:hover {
   font-weight: 500;
   display: grid;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: all 2s ease-in-out;
+  top: 20%;
+  left: 20%;
   cursor: pointer;
 }
 .modal-btn:focus {
@@ -278,7 +276,7 @@ input[type='date']:hover::-webkit-calendar-picker-indicator:hover {
 /* Secured */
 .secured {
   background-color: #fff;
-  padding: 0.5rem 1.5rem;
+  padding: 0.2rem 0.9rem;
   color: #000;
   font-weight: 400;
   display: flex;
@@ -310,6 +308,7 @@ input[type='date']:hover::-webkit-calendar-picker-indicator:hover {
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 30px;
   transform: translate(-50%, -50%);
   display: none;
   z-index: 2;
@@ -317,3 +316,4 @@ input[type='date']:hover::-webkit-calendar-picker-indicator:hover {
 .shown {
   display: block;
 }
+.payfoot-widget__title{ font-size: 12px; }

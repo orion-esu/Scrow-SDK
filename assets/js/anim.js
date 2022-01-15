@@ -33,7 +33,19 @@ $(".btn-switcher").on('click', function (e) {
 
 $(".ccFormatMonitor").on('keyup', function (e) {
     e.preventDefault();
-    var cclength = $(this).val().length;
+    // card icon change
+    // card length and focus on next input
+    var icon = $("#cardicon");
+    var cc = $(this).val();
+    var num = cc.replace(/\s/g, '');
+    if (num[0] == 5) {
+        icon.html('<img src="./assets/image/master-icon.png" alt="Master Icon" class="py-0.5">');
+    } else if (num[0] == 4) {
+        icon.html('<img src="./assets/image/visa-icon.png" alt="Visa Icon" class="py-2">');
+    } else {
+        icon.html('<img src="./assets/image/card-icon.png" alt="Credit Card Icon">');
+    }
+    var cclength = cc.length;
     if (cclength > 21) {
         $("#inputExpDate").focus();
     } else {

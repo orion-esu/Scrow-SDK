@@ -59,7 +59,7 @@
               <input
                 type="text"
                 placeholder="Card Number"
-                class="lg:w-2/3 md:w-2/3 w-full focus:outline-none text-sm placeholder-gray text-gray-600 rounded-tl rounded-bl lg:pl-9 md:pl-8 pl-3 lg:py-0 md:py-0 py-2 flex-grow ccFormatMonitor"
+                class="lg:w-2/3 md:w-2/3 w-full focus:outline-none text-sm placeholder-gray text-gray-600 rounded-tl rounded-bl lg:pl-10 md:pl-8 pl-5 lg:py-0 md:py-0 py-2 flex-grow ccFormatMonitor"
                 maxlength="23"
               />
               <input
@@ -77,8 +77,8 @@
                 maxlength="3"
                 inputmode="numeric"
               />
-              <div class="absolute __card lg:inline md:inine hidden">
-                <i class="far fa-credit-card"></i>
+              <div class="absolute __card lg:inline md:inine hidden" id="cardicon">
+                <img src="./assets/image/card-icon.png" alt="">
               </div>
             </div>
             <div class="my-6 2xl:w-3/4 w-full 2xl:px-0 px-4 mx-auto">
@@ -111,16 +111,15 @@
       </div>
       <div class="secured">
         <img
-          src="/assets/Vector.png"
+          src="./assets/image/lock.png"
           alt="Image of a lock"
-          srcset=""
           class="secured-img"
         />
-        <p>Secured by <span class="secured-bold">Pandascrow</span></p>
+        <p class="payfoot-widget__title">Secured by <span class="secured-bold">Pandascrow</span></p>
       </div>
     </section>
     <!-- Spinner -->
-    <img src="/assets/Spinner.gif" alt="Spinner" class="spin" />
+    <img src="./assets/image/spinner.gif" alt="Spinner" class="spin" />
     <!-- Overlay -->
     <div class="overlay"></div>
     <!-- Scripts -->
